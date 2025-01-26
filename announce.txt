@@ -1,0 +1,114 @@
+Announcing the availability of the SMART information retrieval system
+from Cornell University!  The SMART system offers a natural language,
+indexed text approach to information retrieval that is suitable for
+both experimental and practical applications.
+
+In a typical interactive use of the SMART system, a user fills in a
+skeleton query with a natural language statement of the user's 
+information need. This query is indexed using a collection dependant
+dictionary and then compared against a collection of indexed documents.
+The system judges which documents are likely to be the most useful to
+the user and offers the user a chance to view those on-line documents.
+Examples of collections of documents currently in use at Cornell include:
+    1. Abstracts of all CACM articles (1958 to 1979)
+    2. Unix documentation (Volumes 1 and 2)
+    3. Netnews archives (eg. net.bugs)
+    4. Archives of large electronic mail-boxes.
+
+The present implementation is the latest in a long line of SMART
+implementations dating back to the early 60's.  This, however, is
+the first that has offered interactive use in addition to being an
+extensive test-bed for information retrieval research.
+
+To give an idea of the scope of SMART, the major modules are
+    1. Indexing (includes stemming, stop-word removal, a number of
+        choices of parsing methods)
+    2. Retrieval (includes several types of sequential retrieval,
+        inverted-file retrieval, extended Boolean retrieval (although
+        the interactive portion of SMART cannot yet make use of this)).
+    3. Display (giving a menu of titles for the user to choose among).
+    4. Feedback (automatic construction of a new query given the old
+        query and judgements of usefulness of previously displayed
+        documents).
+    5. Evaluation (multiple means of judging the effectiveness of
+        retrieval upon EXPERIMENTAL collections).
+
+Who should be interested in SMART?  First, anybody who wishes to
+experimentally investigate information retrieval and who hasn't
+developed their own system.  Second, anybody with a serious
+medium scale information retrieval problem.  (Medium scale here
+means roughly from six to a couple hundred megabytes of documents.)
+
+The SMART system is a large system.  Source code and binaries are
+over 5 megabytes themselves, with umpteen more megabytes taken up by
+both the text of the documents and the indexed form of the collection.
+During the design of SMART, whenever there was a tradeoff between
+time and space, space lost.  This allows reasonable response time
+to an interactive query (eg., 2 to 3 CPU seconds on a 10,000 document
+collection) but means substantial disk space overhead (eg., an 
+additional 70% of the space taken up by the original documents).
+SMART is not for those with small disks!
+
+The SMART system is written in C, and runs under Berkeley 4.1 or 4.2
+UNIX.  It is known to run on the various Vaxen and on SUNs (at several
+sites); it will be ported to Pyramids and Goulds in the next couple of
+months. With the exception of the top-level shell scripts (written for
+csh), it should port to System V fairly readily. (Any volunteers?)
+
+-------------------------------------------------------------------
+To get the SMART information retrieval system
+
+1.  Fill in the form below, make a hard copy of it and sign it.
+2.  Make out a check to "Cornell University" for $150 or a
+    purchase order for $175.
+3.  Mail it and the form to:
+
+                The SMART Project
+                c/o Chris Buckley
+                Dept of Computer Science, Upson Hall
+                Cornell University
+                Ithaca, New York   14853
+
+
+Upon receipt of your forms, we'll send you a tape containing the SMART
+source, binaries, sample collections, and documentation.  We'll also
+send hard copies of the documentation.  An electronic mailing list will
+be established for bug reports.
+
+---------------------------------------------------------------------
+
+The form to mail to us is:
+
+
+In exchange for the SMART information retrieval system, I certify the
+following:
+
+a.  I will not use any of the SMART system in a commercial product without
+    obtaining permission from Cornell first.
+b.  I will keep all copyright notices in the source code,
+    and acknowledge the source of the software in any use I make of
+    it.
+c.  I will not redistribute this software to anyone without permission
+    from Cornell first.
+d.  I will keep Cornell informed of any bug fixes.
+e.  I agree that Cornell offers no warranties or guarantees of any kind
+    concerning the use of the SMART system and Cornell will not be liable
+    for any direct or indirect damages resulting from the use of the SMART
+    system.
+f.  I am the appropriate person at my site who can make guarantees a-e.
+
+				Your signature, name, position,
+				phone number, U.S. and electronic
+				mail addresses.
+
+We'd also be interested in anything you want to tell us about your plans
+for the system.
+
+---------------------------------------------------------------------
+Tapes will be sent in "tar" format at 1600 bpi unless otherwise arranged.
+If you have any questions, problems, etc., send mail to me.
+
+Chris Buckley                       (Usenet)  {vax135, ihnp4}!cornell!chrisb
+Dept of Computer Science            (Arpanet,
+Upson Hall, Cornell University       CSnet)   chrisb@cornell
+Ithaca, New York  14853             (Bitnet)  chrisb%crnlcs
